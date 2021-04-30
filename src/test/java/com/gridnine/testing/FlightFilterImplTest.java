@@ -11,17 +11,17 @@ class FlightFilterImplTest {
     private List<Flight> testFlightList = flightBuilder.createFlights();
 
     @Test
-    void departuresUpToCurrentTime_test() {
+    void departuresUpToCurrentTime_takeFlightsArray_thenOk() {
         assertEquals(1,flightFilter.departuresUpToCurrentTime(testFlightList).size());
     }
 
     @Test
-    void segmentsWithArrivalDateEarlierThanDepartureDate_test() {
+    void segmentsWithArrivalDateEarlierThanDepartureDate_takeFlightsArray_thenOk() {
         assertEquals(1,flightFilter.segmentsWithArrivalDateEarlierThanDepartureDate(testFlightList).size());
     }
 
     @Test
-    void totalTimeSpentOnEarthExceedsTwoHours_test() {
+    void totalTimeSpentOnEarthExceedsTwoHours_takeFlightsArray_thenOk() {
         assertEquals(2,flightFilter.totalTimeSpentOnEarthExceedsTwoHours(testFlightList).size());
     }
 }
